@@ -1,0 +1,6 @@
+language: java
+dist: trusty
+sudo: required
+jdk:
+ - oraclejdk8
+script: mvn clean && mvn compile && mvn test-compile && mvn dependency:copy-dependencies && mvn jar:jar && mvn test
